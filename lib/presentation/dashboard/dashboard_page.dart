@@ -1,4 +1,5 @@
 import 'package:toko_devia/common/constants/images.dart';
+import 'package:toko_devia/presentation/account/account_page.dart';
 import 'package:toko_devia/presentation/home/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -16,13 +17,13 @@ class _DashboardPageState extends State<DashboardPage> {
 
   final List<Widget> _pages = [
     const Center(
-      child: Text('Home Page'),
+      child: HomePage(),
     ),
     const Center(
       child: Text('Explore Page'),
     ),
     const Center(child: Text('Cart Page')),
-    const Center(child: Text('Account Page')),
+    const AccountPage(),
   ];
 
   void _onItemTapped(int index) {

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:toko_devia/data/models/requests/register_request_model.dart';
 import 'package:toko_devia/presentation/auth/bloc/register/register_bloc.dart';
 import 'package:toko_devia/presentation/auth/login_page.dart';
-import 'package:toko_devia/presentation/home/dashboard_page.dart';
+import 'package:toko_devia/presentation/dashboard/dashboard_page.dart';
 
 import '../../common/components/button.dart';
 import '../../common/components/custom_text_field.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:toko_devia/common/constants/images.dart';
-import 'package:toko_devia/presentation/home/dashboard_page.dart';
+import 'package:toko_devia/data/datasources/auth_local_datasource.dart';
+import 'package:toko_devia/presentation/dashboard/dashboard_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/components/button.dart';
@@ -81,7 +82,8 @@ class _LoginPageState extends State<LoginPage> {
             listener: (context, state) {
               state.maybeWhen(
                   orElse: () {},
-                  success: (data) {
+                  success: (data) async {
+                    AuthLocalDataSource().saveAuthData(data);
                     Navigator.push(
                         context,
                         MaterialPageRoute(
